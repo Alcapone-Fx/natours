@@ -1,0 +1,154 @@
+@import "../../utilities/variables";
+
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(./hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  height: 95vh;
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  /* evita ver el shake final de la animación */
+  backface-visibility: hidden;
+  margin-bottom: 4rem;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 3.75rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+
+  animation: moveInRight 2s ease-out;
+}
+
+.btn {
+  border: none;
+  display: inline-block;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.7rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: $color-white;
+  color: $color-grey-dark;
+}
+
+.btn::after {
+  /*es necesario especificar content y el display*/
+  content: "";
+  display: inline-block;
+  /*Es un hijo directo de btn */
+  height: 100%;
+  width: 100%;
+  border-radius: 6.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.5);
+  opacity: 0;
+}
+
+.btn-white::after {
+  background-color: $color-white;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  75% {
+    transform: translateX(0.75rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  75% {
+    transform: translateX(-0.75rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
