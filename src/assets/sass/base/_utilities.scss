@@ -1,15 +1,23 @@
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.9rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 5rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 6.25rem !important;
 }
