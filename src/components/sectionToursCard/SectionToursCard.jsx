@@ -27,7 +27,7 @@ function SectionToursCard({ heading, details, cardModifier, price }) {
               <p className="card__price-only">Only</p>
               <p className="card__price-value">${price}</p>
             </div>
-            <a aria-label="button" href="/" className="btn btn--white">
+            <a aria-label="button" href="#popup" className="btn btn--white">
               Book now!
             </a>
           </div>
