@@ -28,7 +28,7 @@ function SectionTours() {
   };
 
   return (
-    <section className="section-tours">
+    <section className="section-tours" id="section-tours">
       <div className="u-center-text u-margin-bottom-medium">
         <h2 className="heading-secondary">Most popular tours</h2>
       </div>
