@@ -13,15 +13,21 @@ body {
   backface-visibility: hidden;
   margin-bottom: 4rem;
 
+  
   &--main {
     display: block;
     font-size: 3.75rem;
     font-weight: 400;
     letter-spacing: 2rem;
-
+    
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    
+    @include respond(phone){
+      font-size: 3rem;
+      letter-spacing: .6rem;
+    }
   }
 
   &--sub {
@@ -31,6 +37,11 @@ body {
     letter-spacing: 0.75rem;
 
     animation: moveInRight 2s ease-out;
+
+    @include respond(phone){
+      font-size: 1.5rem;
+      letter-spacing: .2rem;
+    }
   }
 }
 
@@ -48,6 +59,14 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  @include respond(tablet-portrait){
+    font-size: 1.7rem;
+  }
+  
+  @include respond(phone){
+    font-size: 1.4rem;
+  }
 
   &:hover {
     text-shadow: 0.3rem 0.8rem 1.25rem rgba($color-black, 0.2);

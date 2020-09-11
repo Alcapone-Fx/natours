@@ -13,6 +13,20 @@
     transform: skewX(12deg);
   }
 
+  @include respond(tablet-portrait){
+    padding: 2.75rem;
+    padding-left: 4.65rem;
+    width: 100%;
+  }
+
+  @include respond(phone){
+    transform: skewX(0);
+    
+    & > * {
+      transform: skewX(0);
+    }
+  }
+
   &__shape {
     height: 9.4rem;
     width: 9.4rem;
@@ -20,6 +34,10 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1.9rem) skewX(12deg);
+
+    @include respond(phone){
+      transform: translateX(-1.9rem) skewX(0);
+    }
   }
 
   &__img {

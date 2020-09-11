@@ -6,7 +6,25 @@
   padding: 0;
 }
 
+html {
+  //This define what 1rem is
+  //font-size: 62.5%;
+  @include respond(tablet-landscape) {
+    font-size: 56.25%;
+  }
+  @include respond(tablet-portrait) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
 body {
   box-sizing: border-box;
   padding: 2em;
+
+  @include respond(tablet-portrait){
+    padding: 0;
+  }
 }
