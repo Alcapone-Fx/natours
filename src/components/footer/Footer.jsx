@@ -1,12 +1,20 @@
 import React from "react";
 
-import logo from "../../assets/images/logo-green-2x.png";
+import logo1 from "../../assets/images/logo-green-1x.png";
+import logo2 from "../../assets/images/logo-green-2x.png";
+import logoSmall1 from "../../assets/images/logo-green-small-1x.png";
+import logoSmall2 from "../../assets/images/logo-green-small-2x.png";
 
 function Footer() {
+  const srcSetImg = `${logo1} 1x, ${logo2} 2x`;
+  const srcSetSource = `${logoSmall1} 1x, ${logoSmall2} 2x`;
   return (
     <footer className="footer">
       <div className="footer__logo-box">
-        <img src={logo} alt="Full logo" className="footer__logo"/>
+        <picture  className="footer__logo">
+          <source srcSet={srcSetSource} media="(max-width: 37.5em)"/>
+          <img srcset={srcSetImg} alt="Full logo"/>
+        </picture>
         <div className="row">
           <div className="col-1-of-2">
             <div className="footer__navigation">
