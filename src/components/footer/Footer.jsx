@@ -13,7 +13,7 @@ function Footer() {
       <div className="footer__logo-box">
         <picture  className="footer__logo">
           <source srcSet={srcSetSource} media="(max-width: 37.5em)"/>
-          <img srcset={srcSetImg} alt="Full logo"/>
+          <img srcSet={srcSetImg} alt="Full logo"/>
         </picture>
         <div className="row">
           <div className="col-1-of-2">
