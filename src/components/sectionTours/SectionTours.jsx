@@ -52,7 +52,7 @@ function SectionTours() {
           price="897"
         />
       </div>
-      <div className="u-center-text u-margin-bottom-big u-margin-top-huge">
+      <div className="u-center-text u-margin-bottom-big u-margin-top-big">
         <a href="/" className="btn btn--green">Discover all tours</a>
       </div>
     </section>

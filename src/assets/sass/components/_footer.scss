@@ -4,7 +4,7 @@
   padding: 6.25rem 0;
   font-size: 0.9rem;
 
-  @include respond(tablet-portrait){
+  @include respond(tablet-portrait) {
     padding: 5rem 0;
   }
 
@@ -12,8 +12,14 @@
     margin-bottom: 5rem;
     text-align: center;
 
-    @include respond(tablet-portrait){
+    @include respond(tablet-portrait) {
       margin-bottom: 3.75rem;
+    }
+
+    & .row {
+      @include respond(tablet-portrait) {
+        padding: 0;
+      }
     }
   }
 
@@ -27,7 +33,7 @@
     float: left;
     padding-top: 1.25rem;
 
-    @include respond(tablet-portrait){
+    @include respond(tablet-portrait) {
       text-align: center;
       width: 100%;
     }
@@ -70,7 +76,7 @@
     padding-top: 1.25rem;
     width: 84%;
 
-    @include respond(tablet-portrait){
+    @include respond(tablet-portrait) {
       float: none;
       width: 100%;
     }

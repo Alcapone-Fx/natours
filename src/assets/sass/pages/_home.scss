@@ -6,6 +6,10 @@
   @include respond(tablet-portrait){
     padding: 12.5rem 0;
   }
+  
+  @include respond(phone){
+    margin-top: -15vh;
+  }
 }
 
 .section-features {
